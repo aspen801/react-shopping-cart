@@ -12,7 +12,7 @@ const Header = () => {
         <header>
             <div className="header__logo-container">
                 <img src={logoImage} alt="" />
-                <h1>Mock<span style={{color: '#537977'}}>shop</span></h1>
+                <h1>Mock<span style={{color: '#537977'}}>shop</span>.</h1>
             </div>
             <div className="header__navigation">
                 <a href="#">Men</a>
