@@ -6,6 +6,7 @@ import ButtonRight from "/assets/angle-right.svg";
 import ButtonLeft from "/assets/angle-left.svg";
 
 const HeroSlider = () => {
+  //TODO: change regular useState for current slide on useReducer
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimated, setisAnimated] = useState(false);
 
