@@ -1,0 +1,87 @@
+.card__wrapper {
+    cursor: pointer;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+}
+
+.card__photo-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.card__photo-area img{
+    border-radius: 30px 30px 0 0;
+    height: auto;
+    width: 100%;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.card__wrapper:hover img{
+    height: auto;
+    width: 90%;
+}
+
+.card__info-area {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 30px 30px;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.card__info-area-title h3{
+    font-size: 17px;
+    color: #0F172A;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card__info-area-description p{
+    font-size: 13px;
+    max-width: 230px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #6B7280;
+    overflow: hidden;
+}
+
+
+.card__info-area-price {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card__info-area-price p{
+    max-width: fit-content;
+    font-size: 13px;
+    font-weight: bold;
+    color: #0ea842;
+    padding: 5px;
+    border: 2px solid #0ea842;
+    border-radius: 5px;
+}
+
+.card__info-area-price button{
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    color: #0ea842;
+    padding: 5px;
+    border: 2px solid #0ea842;
+    border-radius: 5px;
+    background: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.card__info-area-price button:hover{
+    color: white;
+    background-color: #0ea842;
+}
