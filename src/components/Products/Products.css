@@ -1,0 +1,26 @@
+.products__wrapper{
+    min-height: 100vh;
+    margin: 100px 15% 0 15%;
+}
+
+.products__text-area{
+    margin-bottom: 50px;
+}
+
+.products__text-area h1{
+    font-size: 36px;
+}
+
+.products__text-area p{
+    margin-top: 15px;
+    font-size: 18px;
+    color: #6B7280;
+}
+
+.products__cards-area {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px));
+    grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 30px;
+}
