@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useContext} from "react";
+import { CartContext } from "../../../App";
 import "./ProductCard.css";
 
 const ProductCard = ({product, productVariants}) => {
@@ -10,6 +11,8 @@ const ProductCard = ({product, productVariants}) => {
             </div>
         )
     }
+
+    const { addToCart } = useContext(CartContext);
     
     const productImage = product.featuredImage.url;
     const variantPrice = productVariants.edges[0].node.price.amount;
@@ -28,7 +31,7 @@ const ProductCard = ({product, productVariants}) => {
                 </div>
                 <div className="card__info-area-price">
                     <p>{"$ " + variantPrice}</p>
-                    <button>Add to cart</button>
+                    <button onClick={() => addToCart({product, productVariants})}>Add to cart</button>
                 </div>    
             </div>
         </div>
