@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./Header.css"
 
 import logoImage from "/assets/paper-plane.svg"
@@ -11,8 +12,11 @@ const Header = () => {
     return (
         <header>
             <div className="header__logo-container">
-                <img src={logoImage} alt="" />
-                <h1>Mock<span style={{color: '#537977'}}>shop</span>.</h1>
+                <Link to={"/"}>
+                    <img src={logoImage} alt="" />
+                    <h1>Mock<span style={{color: '#537977'}}>shop</span>.</h1>
+                </Link>
+                
             </div>
             <div className="header__navigation">
                 <a href="#">Men</a>
@@ -24,7 +28,7 @@ const Header = () => {
             </div>
             <div className="header__side-menu">
                 <button><img src={searchIcon} alt="" /></button>
-                <button><img src={cartIcon} alt="" /></button>
+                <Link to={"/cart"}><button><img src={cartIcon} alt="" /></button></Link>
             </div>
         </header>
     )
