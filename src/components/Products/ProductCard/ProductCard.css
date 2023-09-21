@@ -63,9 +63,9 @@
     max-width: fit-content;
     font-size: 13px;
     font-weight: bold;
-    color: #0ea842;
+    color: rgb(0,160,70);
     padding: 5px;
-    border: 2px solid #0ea842;
+    border: 2px solid rgb(0,160,70);
     border-radius: 5px;
 }
 
@@ -73,9 +73,9 @@
     cursor: pointer;
     font-size: 13px;
     font-weight: bold;
-    color: #0ea842;
+    color: rgb(0,160,70);
     padding: 5px;
-    border: 2px solid #0ea842;
+    border: 2px solid rgb(0,160,70);
     border-radius: 5px;
     background: none;
     transition: background-color 0.2s ease-in-out;
@@ -83,5 +83,17 @@
 
 .card__info-area-price button:hover{
     color: white;
-    background-color: #0ea842;
+    background-color: rgb(0,160,70);
+}
+
+.card__info-area-price button:active{
+    color: white;
+    background-color: #0ea841b9;
+}
+
+.card__info-area-price button.pressed{
+    color: rgb(0,160,70);
+    text-decoration: underline;
+    border: none;
+    background-color: #ffffff;
 }
