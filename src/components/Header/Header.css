@@ -74,6 +74,30 @@ header {
     cursor: pointer;
 }
 
+.header__side-menu-cart-button-container {
+    position: relative;
+}
+
+.header__side-menu-cart-counter{
+    overflow: hidden;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 1px;
+    top: 0;
+    border-radius: 50%;
+    background-color: rgb(0,160,70);
+}
+
+.header__side-menu-cart-counter p{
+    color: white;
+    margin: 5px;
+}
+
+
 .header__side-menu a:hover {
     border-radius: 50%;
 }
