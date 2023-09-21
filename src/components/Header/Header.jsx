@@ -22,7 +22,7 @@ const Header = () => {
       </div>
       <div className="header__navigation">
         <a href="#">Men</a>
-        <a href="#">Woman</a>
+        <a href="#">Women</a>
         <a href="#">Sport</a>
         <a href="#">Blank</a>
         <a href="#">Blank</a>
