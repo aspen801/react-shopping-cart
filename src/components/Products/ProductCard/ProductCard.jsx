@@ -1,26 +1,20 @@
 import React, {useContext} from "react";
-import { CartContext } from "../../../App";
+import { CartContext } from "../../../context/CartContext.jsx";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./ProductCard.css";
 
-const ProductCard = ({product, productVariants}) => {
-    
-    if(!product){
-        return (
-            <div>
-                Loading...
-            </div>
-        )
-    }
+
+const ProductCard = ({product}) => {
+
+    const notify = () => toast(`${product.title} was added to cart!`, {autoClose: 1000});
 
     const { addToCart } = useContext(CartContext);
-    
-    const productImage = product.featuredImage.url;
-    const variantPrice = productVariants.edges[0].node.price.amount;
 
     return (
         <div className="card__wrapper">
             <div className="card__photo-area">
-                <img src={productImage} alt="" />
+                <img src={product.image} alt="" loading="lazy"/>
             </div>
             <div className="card__info-area"> 
                 <div className="card__info-area-title">
@@ -30,8 +24,8 @@ const ProductCard = ({product, productVariants}) => {
                     <p>{product.description ? product.description : 'No desctiption yet'}</p>
                 </div>
                 <div className="card__info-area-price">
-                    <p>{"$ " + variantPrice}</p>
-                    <button onClick={() => addToCart({product, productVariants})}>Add to cart</button>
+                    <p>{"$ " + product.price}</p>
+                    <button className="" onClick={() => {addToCart(product), notify()}}>{"Add to cart"}</button>
                 </div>    
             </div>
         </div>
