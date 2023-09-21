@@ -22,4 +22,8 @@
   font-family: 'Open Runde', sans-serif;
 }
 
+.Toastify__toast-container--top-right {
+  margin-top: 75px;
+  --toastify-color-progress-light: rgb(0,160,70);
+}
 
