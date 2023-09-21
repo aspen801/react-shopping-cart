@@ -104,9 +104,9 @@
     margin-bottom: auto;
     font-size: 13px;
     font-weight: bold;
-    color: #0ea842;
+    color: rgb(0,160,70);
     padding: 5px;
-    border: 2px solid #0ea842;
+    border: 2px solid rgb(0,160,70);
     border-radius: 5px;
 }
 
