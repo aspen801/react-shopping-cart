@@ -1,4 +1,5 @@
 .slider__wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,4 +55,11 @@
     padding-right: 5px;
     height: auto;
     width: 32px;
+}
+
+@media (max-width: 600px) {
+    .slider__wrapper h1{
+        font-size: 25px;
+        margin: 0 50px 0 50px;
+    }
 }
