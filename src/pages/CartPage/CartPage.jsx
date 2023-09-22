@@ -48,7 +48,7 @@ const CartPage = () => {
               </div>
             ))}
           </div>
-          <hr className="cart__divider" />
+          <hr className="cart__summary-area-divider" />
           <div className="cart__summary-area">
             <h1>Summary</h1>
             <p><span>Subtotal:</span> <span className="price">{getCartTotal()}.00 $</span></p>
