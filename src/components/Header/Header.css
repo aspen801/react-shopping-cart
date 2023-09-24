@@ -121,7 +121,14 @@ header {
 }
 
 .header__side-menu-cart-button-container {
+    height: 50px;
+    width: 50px;
     position: relative;
+}
+
+.header__side-menu-search-button-container {
+    height: 50px;
+    width: 50px;
 }
 
 .header__side-menu-cart-counter{
