@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/open-runde');
+@import url('https://fonts.cdnfonts.com/css/poppins');
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -19,7 +19,7 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Open Runde', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .Toastify__toast-container--top-right {
