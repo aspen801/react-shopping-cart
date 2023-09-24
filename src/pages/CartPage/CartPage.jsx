@@ -25,6 +25,11 @@ const CartPage = () => {
                 <div className="cart__item">
                   <div className="cart__img-container">
                     <img src={cartItem.product.image} alt="" />
+                    <div className="cart__item-img-price-container">
+                        <p>
+                          $ {cartItem.product.price}
+                        </p>
+                    </div>
                   </div>
                   <div className="cart__item-info">
                     <div className="cart__item-info-top">
@@ -34,9 +39,11 @@ const CartPage = () => {
                         <div><h1>{cartItem.quantity}</h1></div>
                         <button onClick={() => {addToCart(cartItem.product)}}><img src={PlusButton} alt="" /></button>
                       </div>
-                      <p>
-                        $ {cartItem.product.price}
-                      </p>
+                      <div className="cart__item-info-top-price-container">
+                        <p>
+                          $ {cartItem.product.price}
+                        </p>
+                      </div>
                     </div>
                     <div className="cart__item-info-bottom">
                       <h1>{cartItem.product.description}</h1>
