@@ -35,6 +35,17 @@
     gap: 20px;
 }
 
+.cart__empty-message {
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.5;
+    color: #6B7280;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .cart__img-container img{
     width: auto;
     height: 120px;

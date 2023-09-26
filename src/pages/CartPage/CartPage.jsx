@@ -11,7 +11,39 @@ const CartPage = () => {
   //imagine it fetch from server :)
   const shippingCost = 15;
 
-  return (
+  if(cartItems.length === 0){
+    return (
+      <div className="cart__wrapper">
+      <div className="cart__content">
+        <div className="cart__text-area">
+          <h1>Shopping cart</h1>
+        </div>
+        <hr className="cart__divider" />
+        <div className="cart__checkout-area">
+          <div className="cart__item-area">
+            <div className="cart__empty-message">
+              <h1>Cart is empty right now 😔</h1>
+            </div>
+          </div>
+          <hr className="cart__summary-area-divider" />
+          <div className="cart__summary-area">
+            <h1>Summary</h1>
+            <p><span>Subtotal:</span> <span className="price">{getCartTotal()}.00 $</span></p>
+            <hr className="cart__summary-divider"/>
+            <p><span>Shipping:</span> <span className="price">{shippingCost}.00 $</span></p>
+            <hr className="cart__summary-divider"/>
+            <p><span>Order total:</span> <span className="price">{getCartTotal() + shippingCost}.00 $</span></p>
+            <div className="cart__summary-checkout-button">
+              <button>Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    )
+  }
+
+  return  (
     <div className="cart__wrapper">
       <div className="cart__content">
         <div className="cart__text-area">
