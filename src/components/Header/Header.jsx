@@ -8,37 +8,24 @@ import searchIcon from "/assets/search.svg";
 import cartIcon from "/assets/shopping-cart.svg";
 import burgerMenu from "/assets/menu-burger.svg";
 import crossIcon from "/assets/cross.svg";
-
-const getCurrentDimension = () => {
-  return {
-    width: window.innerWidth,
-    height: window.innerHeight,
-  };
-};
+import useWindowSize from "../../hooks/useWindowSize.jsx";
 
 const Header = () => {
 
   const { getCartQuantity } = useContext(CartContext);
   const [visible, setVisible] = useState(false);
-  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+  const windowSize = useWindowSize(); 
 
   const toggleBurgerMenu = () => {
     setVisible((prevVisible) => !prevVisible);
   };
 
   useEffect(() => {
-    const updateDimension = () => {
-      if(screenSize.width >= 900){
-        setVisible(false);
-      } 
-      setScreenSize(getCurrentDimension());
-    };
-    window.addEventListener("resize", updateDimension);
-
-    return () => {
-      window.removeEventListener("resize", updateDimension);
-    };
-  }, [screenSize]);
+    if (windowSize.width >= 900) {
+      setVisible(false);
+    }
+  }, [windowSize.width]);
 
   return (
     <header>
