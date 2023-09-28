@@ -1,11 +1,11 @@
 import React from "react";
 import "./Products.css";
 import ProductCard from "./ProductCard/ProductCard";
-import useFetchProducts from "../../hooks/useFetchProducts"; // Импортируем кастомный хук
+import useFetchProducts from "../../hooks/useFetchProducts";
 
 const Products = () => {
-    
-  const products = useFetchProducts(); // Используем кастомный хук для получения данных
+
+  const products = useFetchProducts(); 
 
   return (
     <div className="products__wrapper">
