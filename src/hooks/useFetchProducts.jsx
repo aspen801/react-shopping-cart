@@ -13,7 +13,7 @@ const useFetchProducts = () => {
           id: item.node.id,
           title: item.node.title,
           description: item.node.description,
-          image: item.node.featuredImage.url,
+          image: item.node.featuredImage.url + '&width=533',
           price: item.node.variants.edges[0].node.price.amount,
         }));
         setProducts(transformedData);
